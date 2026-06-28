@@ -16,4 +16,6 @@ class MainApp(App):
     def on_start(self):
         pass
 
+    def mudar_tela(self, id_tela):
+        print(id_tela)
 MainApp().run()

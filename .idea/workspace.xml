@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8efab82b-4bde-4895-a9cb-8b5c8ccdfabc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kv/ajustespage.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kv/ajustespage.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kv/homepage.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kv/homepage.kv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.kv" beforeDir="false" afterPath="$PROJECT_DIR$/main.kv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -32,7 +34,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "test",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -88,7 +90,7 @@
       <workItem from="1782655611786" duration="532000" />
       <workItem from="1782656151382" duration="4873000" />
       <workItem from="1782661054203" duration="31000" />
-      <workItem from="1782661175605" duration="1352000" />
+      <workItem from="1782661175605" duration="4763000" />
     </task>
     <servers />
   </component>
@@ -96,6 +98,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/AplicativoVendas$main.coverage" NAME="main Coverage Results" MODIFIED="1782662401842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AplicativoVendas$main.coverage" NAME="main Coverage Results" MODIFIED="1782674225603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
