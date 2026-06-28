@@ -13,9 +13,11 @@ GUI = Builder.load_file('main.kv')
 class MainApp(App):
     def build(self):
         return GUI
-    def on_start(self):
-        pass
 
     def mudar_tela(self, id_tela):
         print(id_tela)
+        print(self.root.ids)
+        gerenciador_telas = self.root.ids["screen_manager"]
+        gerenciador_telas.current = id_tela
+
 MainApp().run()
