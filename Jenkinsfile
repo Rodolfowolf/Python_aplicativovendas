@@ -43,16 +43,18 @@ pipeline {
             }
         }
 
-        // 4. ARQUIVAMENTO E LOGS (ARTIFACT)
+// 4. ARQUIVAMENTO E LOGS (ARTIFACT)
         stage('Archive Artifact') {
             steps {
                 echo '=== [STATUS] Empacotando a versão estável ==='
-                // Cria um backup compactado do estado atual do repositório
-                sh "tar -czf ${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz --exclude=.git ."
+
+                // Adicionamos um `--exclude` apontando para o próprio nome do arquivo .tar.gz que será gerada
+                sh "tar -czf ${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz --exclude=.git --exclude=${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz ."
+
                 echo "✅ Artefato criado com sucesso: ${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz"
-                
+
                 // Salva o arquivo compactado dentro do histórico do próprio Jenkins
-                archiveArtifacts artifacts: '*.tar.gz', allowEmptyArchive: true
+                archiveArtifacts artifacts: '*.tar.gz', allowEmptyArchive: false
             }
         }
     }
