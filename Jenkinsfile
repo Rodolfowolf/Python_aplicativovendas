@@ -48,12 +48,15 @@ pipeline {
             steps {
                 echo '=== [STATUS] Empacotando a versão estável ==='
 
-                // Adicionamos um `--exclude` apontando para o próprio nome do arquivo .tar.gz que será gerada
-                sh "tar -czf ${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz --exclude=.git --exclude=${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz ."
+                // 1. Criamos o arquivo compactado na pasta temporária do Linux (/tmp)
+                sh "tar -czf /tmp/${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz --exclude=.git ."
+
+                // 2. Movemos o arquivo já finalizado para dentro do workspace do Jenkins
+                sh "mv /tmp/${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz ."
 
                 echo "✅ Artefato criado com sucesso: ${env.APP_NAME}_build_${env.BUILD_NUMBER}.tar.gz"
 
-                // Salva o arquivo compactado dentro do histórico do próprio Jenkins
+                // 3. O Jenkins agora arquiva o arquivo estático sem loops
                 archiveArtifacts artifacts: '*.tar.gz', allowEmptyArchive: false
             }
         }
